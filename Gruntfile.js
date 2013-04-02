@@ -30,6 +30,7 @@ module.exports = function(grunt) {
                 src: ["src/js/service/*.js"],
                 options: {
                     vendor: ["lib/angular/angular.js", "lib/angular-resource/angular-resource.js"],
+                    helpers: ["lib/angular-mocks/angular-mocks.js"],
                     specs: "test/*Spec.js",
                     template: require("grunt-template-jasmine-istanbul"),
                     templateOptions: {
@@ -51,7 +52,7 @@ module.exports = function(grunt) {
         grunt.task.run("exec:tsserve");
     });
 
-    grunt.registerTask("default", ["jshint", "copy"]);
+    grunt.registerTask("default", ["jshint", "test", "copy"]);
     grunt.registerTask("test", ["jasmine"]);
 
     grunt.loadNpmTasks("grunt-exec");
