@@ -5,7 +5,8 @@ module.exports = function(grunt) {
 
         copy: {
             lib: { expand: true, flatten: true, src: ["lib/**/*.js"], dest: "app/assets/", filter: "isFile" },
-            src: { expand: true, flatten: true, src: ["src/**/*.js"], dest: "app/assets/", filter: "isFile" }
+            src: { expand: true, flatten: true, src: ["src/**/*.js"], dest: "app/assets/", filter: "isFile" },
+            coverage: { expand: true, flatten: true, src: ["tmp/coverage/*.*"], dest: "app/assets/", filter: "isFile" }
         },
         exec: {
             tsserve: {
