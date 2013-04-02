@@ -1,0 +1,15 @@
+{
+  "name": "twangular",
+  "version": "0.1.0",
+  "main": ["src/js/service/BagService.js", "src/js/service/TiddlerService"],
+  "description": "An AngularJS library for TiddlyWeb",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "angular": "~1.0.5",
+    "angular-resource": "~1.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pads/twangular.git"
+  }
+}

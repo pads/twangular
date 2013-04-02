@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Twangular Example</title>
+        <link rel="stylesheet" type="text/css" href="/bags/common/tiddlers/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="twangular.css" />
+    </head>
+    <body ng-app="twangular">
+        <header>
+            <h1>Twangular Examples</h1>
+        </header>
+        <section ng-controller="BagController">
+            <h1>Fetch Bag</h1>
+            <input type="text" placeholder="bag name" ng-model="bagName">
+            <button ng-click="getBag()">Fetch</button>
+            <button ng-click="clearBag()">Clear</button>
+            <ul>
+                <li ng-repeat="tiddler in bag">
+                    <h3>{{ tiddler.title }}</h3>
+                </li>
+            </ul>
+        </section>
+        <br>
+        <section ng-controller="TiddlerController">
+
+            <h1>Fetch Tiddler</h1>
+            <input type="text" placeholder="bag name" ng-model="bagName">
+            <input type="text" placeholder="tiddler title" ng-model="tiddlerTitle">
+            <button ng-click="getTiddler()">Fetch</button>
+            <button ng-click="clearTiddler()">Clear</button>
+            <br>
+            <code>{{ tiddler }}</code>
+
+            <h1>Create/Edit Tiddler</h1>
+            <input type="text" placeholder="bag name" ng-model="bagName">
+            <input type="text" placeholder="tiddler title" ng-model="tiddlerTitle">
+            <input type="text" placeholder="tags (space separated)" ng-model="tiddlerTags">
+            <button ng-click="putTiddler()">Create</button>
+            <br>
+            <textarea rows="5" placeholder="tiddler text" ng-model="tiddlerText"></textarea>
+
+            <h1>Delete Tiddler</h1>
+            <input type="text" placeholder="bag name" ng-model="bagName">
+            <input type="text" placeholder="tiddler title" ng-model="tiddlerTitle">
+            <button ng-click="deleteTiddler()">Delete</button>
+        </section>
+        <br>
+        <footer>
+            &copy; 2013 Osmosoft
+        </footer>
+        <script src="angular.js"></script>
+        <script src="twangular.js"></script>
+        <script src="BagController.js"></script>
+        <script src="TiddlerController.js"></script>
+        <script src="BagService.js"></script>
+        <script src="TiddlerService.js"></script>
+        <script src="angular-resource.js"></script>
+        <script src="http://tiddlyspace.com/bags/common/tiddlers/backstage.js"></script>
+    </body>
+</html>
