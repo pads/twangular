@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/pads/twangular.png)](https://travis-ci.org/pads/twangular)
+
 # twangular
 
 An AngularJS library for TiddlyWeb.
