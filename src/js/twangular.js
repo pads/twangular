@@ -1,1 +1,1 @@
-angular.module("twangular", ["bagModule", "tiddlerModule"]);
+angular.module("twangular", ["bagModule", "tiddlerModule", "searchModule"]);
