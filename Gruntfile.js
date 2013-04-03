@@ -40,6 +40,16 @@ module.exports = function(grunt) {
                     }
                 }
             }
+        },
+        plato: {
+            complexity: {
+                options : {
+                    jshint : grunt.file.readJSON(".jshintrc")
+                },
+                files: {
+                    "tmp/complexity": ["src/js/**/*.js"]
+                }
+            }
         }
     });
 
@@ -57,6 +67,7 @@ module.exports = function(grunt) {
     grunt.registerTask("test", ["jasmine"]);
 
     grunt.loadNpmTasks("grunt-exec");
+    grunt.loadNpmTasks("grunt-plato");
     grunt.loadNpmTasks("grunt-contrib-copy");
     grunt.loadNpmTasks("grunt-contrib-clean");
     grunt.loadNpmTasks("grunt-contrib-jshint");
