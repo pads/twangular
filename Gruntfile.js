@@ -23,7 +23,7 @@ module.exports = function(grunt) {
             all: ["Gruntfile.js", "src/js/**/*.js", "test/**/*.js"]
         },
         watch: {
-            files: ["src/**/*.*", "app/twangular.html"],
+            files: ["src/**/*.*", "test/*.js", "app/twangular.html"],
             tasks: ["test", "default"]
         },
         jasmine: {
