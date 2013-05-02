@@ -5,7 +5,7 @@ function TiddlerController($scope, tiddlerService) {
         tiddlerService.getTiddler($scope.bagName, $scope.tiddlerTitle, function(tiddler) {
 
             $scope.tiddler = tiddler;
-        });
+        }, $scope.render);
     };
 
     $scope.clearTiddler = function() {

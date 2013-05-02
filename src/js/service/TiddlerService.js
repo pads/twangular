@@ -16,9 +16,14 @@ angular.module("tiddlerModule", ["ngResource"]).config(function($httpProvider) {
         }
     );
 
-    service.getTiddler = function(bagName, tiddlerTitle, callback) {
+    service.getTiddler = function(bagName, tiddlerTitle, callback, render) {
 
-        var tiddler =  Tiddler.get({ bagName: bagName, tiddlerTitle: tiddlerTitle, contentType: ".json" }, function() {
+        var parameters = { bagName: bagName, tiddlerTitle: tiddlerTitle, contentType: ".json" };
+        if(render) {
+            parameters.render = 1;
+        }
+
+        var tiddler =  Tiddler.get(parameters, function() {
 
             callback(tiddler);
         });

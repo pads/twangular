@@ -36,6 +36,13 @@ describe("Tiddler Service", function() {
         service.deleteTiddler("twangular_public", "RemoveTiddler", function() {});
     });
 
+    it("should send the expected GET request when fetching a tiddler with the render option set", function() {
+
+        $mockHttpBackend.expectGET("/bags/twangular_public/tiddlers/TestTiddler.json?render=1").respond(200, "");
+
+        service.getTiddler("twangular_public", "TestTiddler", function() {}, true);
+    });
+
     afterEach(function() {
 
         $mockHttpBackend.flush();
