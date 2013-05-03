@@ -5,7 +5,7 @@ function SearchController($scope, searchService) {
         searchService.search($scope.query, function(searchResults) {
 
             $scope.searchResults = searchResults;
-        });
+        }, $scope.render);
     };
 
     $scope.clearSearch = function() {

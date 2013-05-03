@@ -48,6 +48,7 @@
         <section ng-controller="SearchController">
             <h1>Search Tiddlers</h1>
             <input type="text" placeholder="search query" ng-model="query">
+            <label>Render</label><input type="checkbox" ng-model="render"/>
             <button ng-click="search()">Search</button>
             <button ng-click="clearSearch()">Clear Search</button>
             <br>

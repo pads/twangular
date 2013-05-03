@@ -21,6 +21,13 @@ describe("Search Service", function() {
         service.search("tag:test", function() {});
     });
 
+    it("should send the expected GET request when searching for tiddlers and specifying the render option", function() {
+
+        $mockHttpBackend.expectGET("/search.json?fat=1&q=tag:test&render=1").respond(200, "");
+
+        service.search("tag:test", function() {}, true);
+    });
+
     afterEach(function() {
 
         $mockHttpBackend.flush();
