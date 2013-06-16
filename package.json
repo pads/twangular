@@ -1,6 +1,6 @@
 {
   "name": "twangular",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An AngularJS library for TiddlyWeb",
   "author": "Ben Paddock",
   "main": "Gruntfile.js",
