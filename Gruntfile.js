@@ -24,7 +24,7 @@ module.exports = function(grunt) {
         },
         watch: {
             files: ["src/**/*.*", "test/*.js", "app/twangular.html"],
-            tasks: ["test", "default"]
+            tasks: ["default"]
         },
         jasmine: {
             test: {
