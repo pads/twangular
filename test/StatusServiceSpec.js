@@ -1,3 +1,4 @@
+/*global describe:false, beforeEach:false, afterEach:false, it:false, module:false, inject:false */
 describe("Status Service", function() {
 
     var service;

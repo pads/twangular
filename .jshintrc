@@ -1,6 +1,5 @@
 {
     "bitwise": true,
-    "camelcase": true,
     "curly": true,
     "eqeqeq": true,
     "forin": true,
@@ -19,6 +18,7 @@
     "browser": true,
     "sub": true,
     "globals": {
-        "angular": true
+        "angular": true,
+        "$scope": true
     }
 }

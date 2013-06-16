@@ -1,12 +1,30 @@
-/*global module:false */
+/*global module:false, require:false */
 module.exports = function(grunt) {
 
     grunt.initConfig({
 
         copy: {
-            lib: { expand: true, flatten: true, src: ["lib/**/*.js"], dest: "app/assets/", filter: "isFile" },
-            src: { expand: true, flatten: true, src: ["src/**/*.js"], dest: "app/assets/", filter: "isFile" },
-            coverage: { expand: true, flatten: true, src: ["tmp/coverage/**/*.*"], dest: "app/assets/", filter: "isFile" }
+            lib: {
+                expand: true,
+                flatten: true,
+                src: ["lib/**/*.js"],
+                dest: "app/assets/",
+                filter: "isFile"
+            },
+            src: {
+                expand: true,
+                flatten: true,
+                src: ["src/**/*.js"],
+                dest: "app/assets/",
+                filter: "isFile"
+            },
+            coverage: {
+                expand: true,
+                flatten: true,
+                src: ["tmp/coverage/**/*.*"],
+                dest: "app/assets/",
+                filter: "isFile"
+            }
         },
         exec: {
             tsserve: {
@@ -20,7 +38,10 @@ module.exports = function(grunt) {
         },
         clean: ["lib", "tmp"],
         jshint: {
-            all: ["Gruntfile.js", "src/js/**/*.js", "test/**/*.js"]
+            all: ["Gruntfile.js", "src/js/**/*.js", "test/**/*.js"],
+            options: {
+                jshintrc: ".jshintrc"
+            }
         },
         watch: {
             files: ["src/**/*.*", "test/*.js", "app/twangular.html"],

@@ -1,3 +1,4 @@
+/*global describe:false, beforeEach:false, afterEach:false, it:false, module:false, inject:false */
 describe("Bag Service", function() {
 
     var service;

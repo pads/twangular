@@ -1,3 +1,4 @@
+/*jshint unused:false */
 function StatusController($scope, statusService) {
 
     $scope.getStatus = function() {

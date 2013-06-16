@@ -1,3 +1,4 @@
+/*jshint unused:false */
 function SearchController($scope, searchService) {
 
     $scope.search = function() {

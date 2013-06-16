@@ -1,3 +1,4 @@
+/*jshint unused:false */
 function BagController($scope, bagService) {
 
     $scope.getBag = function() {

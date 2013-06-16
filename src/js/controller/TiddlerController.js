@@ -1,3 +1,4 @@
+/*jshint unused:false */
 function TiddlerController($scope, tiddlerService) {
 
     $scope.getTiddler = function() {
@@ -17,7 +18,7 @@ function TiddlerController($scope, tiddlerService) {
 
         var tags = $scope.tiddlerTags;
         if(tags) {
-            tags = tags.split(' ');
+            tags = tags.split(" ");
         } else {
             tags = [];
         }
