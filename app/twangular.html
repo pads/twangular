@@ -61,6 +61,14 @@
             <br>
             <code>{{ status }}</code>
         </section>
+        <section ng-controller="LoginController">
+            <h1>Login</h1>
+            <input type="text" placeholder="username" ng-model="username">
+            <input type="password" placeholder="password" ng-model="password">
+            <button ng-click="login()">Login</button>
+            <br>
+            <code>{{ status }}</code>
+        </section>
         <section>
             <h1>Testing</h1>
             <a href="index.html">Code coverage</a>
@@ -75,10 +83,12 @@
         <script src="TiddlerController.js"></script>
         <script src="SearchController.js"></script>
         <script src="StatusController.js"></script>
+        <script src="LoginController.js"></script>
         <script src="BagService.js"></script>
         <script src="TiddlerService.js"></script>
         <script src="SearchService.js"></script>
         <script src="StatusService.js"></script>
+        <script src="LoginService.js"></script>
         <script src="angular-resource.js"></script>
         <script src="http://tiddlyspace.com/bags/common/tiddlers/backstage.js"></script>
     </body>
