@@ -33,3 +33,9 @@ To run the example application:
     grunt ts-serve
 
 Open `http://localhost:8080/twangular.html`
+
+## Testing
+
+Run `grunt test` to run tests in the console.
+
+Run `grunt jasmine:test:build` to create a Spec runner (`_SpecRunner.html`) to open in the browser.
