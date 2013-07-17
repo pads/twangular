@@ -3,6 +3,7 @@
   "version": "0.1.1",
   "description": "An AngularJS library for TiddlyWeb",
   "author": "Ben Paddock",
+  "license": "MIT",
   "main": "Gruntfile.js",
   "devDependencies": {
     "grunt": "~0.4.0",
