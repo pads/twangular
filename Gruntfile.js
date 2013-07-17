@@ -84,8 +84,8 @@ module.exports = function(grunt) {
         grunt.task.run("exec:tsserve");
     });
 
-    grunt.registerTask("default", ["jshint", "test", "copy"]);
-    grunt.registerTask("test", ["jasmine"]);
+    grunt.registerTask("default", ["test", "copy"]);
+    grunt.registerTask("test", ["jshint", "jasmine"]);
 
     grunt.loadNpmTasks("grunt-exec");
     grunt.loadNpmTasks("grunt-plato");
