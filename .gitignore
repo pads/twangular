@@ -3,3 +3,4 @@ lib
 tmp
 _SpecRunner.html
 .grunt
+.tsapp
