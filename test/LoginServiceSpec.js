@@ -54,8 +54,18 @@ describe("Login Service", function() {
         expect(returnedStatusCode).toBe(expectedStatusCode);
     });
 
+    it("should be able to use a custom challenger", function() {
+
+        var challenger = "tiddlyspace.cookie_form";
+
+        $mockHttpBackend.expectPOST("/challenge/tiddlywebplugins.tiddlyspace.cookie_form",
+            "user=pads&password=letmein").respond(401, "");
+
+        service.login("pads", "letmein", function() {}, challenger);
+        $mockHttpBackend.flush();
+    });
+
     //TODO test redirect
-    //TODO test different challenger
 
     afterEach(function() {
 

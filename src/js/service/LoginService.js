@@ -3,9 +3,13 @@ angular.module("loginModule", ["ng"]).factory("loginService", function($http) {
     var service = {};
     var challengerURL = "/challenge/cookie_form";
 
-    service.login = function(username, password, callback) {
+    service.login = function(username, password, callback, challenger) {
 
         var formData = "user=" + username + "&password=" + password;
+
+        if(challenger) {
+            challengerURL = "/challenge/tiddlywebplugins." + challenger;
+        }
 
         $http.post(challengerURL, formData, {
 
