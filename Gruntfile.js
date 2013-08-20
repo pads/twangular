@@ -57,7 +57,24 @@ module.exports = function(grunt) {
                     template: require("grunt-template-jasmine-istanbul"),
                     templateOptions: {
                         coverage: "tmp/coverage/coverage.json",
-                        report: "tmp/coverage"
+                        report: [
+                            {
+                                type: "lcov",
+                                options: {
+                                    dir: "tmp/coverage"
+                                }
+                            },
+                            {
+                                type: "text",
+                                options: {}
+                            }
+                        ],
+                        thresholds: {
+                            lines: 80,
+                            statements: 80,
+                            branches: 80,
+                            functions: 80
+                        }
                     }
                 }
             }

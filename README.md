@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/pads/twangular.png)](https://travis-ci.org/pads/twangular)
+[![Coverage Status](https://coveralls.io/repos/pads/twangular/badge.png)](https://coveralls.io/r/pads/twangular)
 
 # twangular
 
