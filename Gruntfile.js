@@ -17,13 +17,6 @@ module.exports = function(grunt) {
                 src: ["src/**/*.js"],
                 dest: "app/assets/",
                 filter: "isFile"
-            },
-            coverage: {
-                expand: true,
-                flatten: true,
-                src: ["tmp/coverage/**/*.*"],
-                dest: "app/assets/",
-                filter: "isFile"
             }
         },
         exec: {
