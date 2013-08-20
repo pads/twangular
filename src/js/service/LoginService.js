@@ -14,12 +14,12 @@ angular.module("loginModule", ["ng"]).factory("loginService", function($http) {
         $http.post(challengerURL, formData, {
 
             headers: { "Content-Type": "application/x-www-form-urlencoded" }
-        }).success(function(data, status) {
+        }).success(function() {
 
-            callback(status);
-        }).error(function(data, status) {
+            callback({ success: true });
+        }).error(function(reason, code) {
 
-            callback(status);
+            callback({ success: false, reason: reason, code: code });
         });
     };
 

@@ -67,7 +67,9 @@
             <input type="password" placeholder="password" ng-model="password">
             <button ng-click="login()">Login</button>
             <br>
-            <code>{{ status }}</code>
+            <code>Status code: {{ result.code }}</code>
+            <br>
+            <code>{{ result.reason }}</code>
         </section>
         <section>
             <h1>Testing</h1>

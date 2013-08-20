@@ -6,6 +6,9 @@ function LoginController($scope, loginService) {
         loginService.login($scope.username, $scope.password, function(result) {
 
             $scope.result = result;
+            if(result.success) {
+                location.reload();
+            }
         }, "tiddlyspace.cookie_form");
     };
 }
