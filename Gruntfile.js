@@ -46,6 +46,14 @@ module.exports = function(grunt) {
                 options: {
                     vendor: ["lib/angular/angular.js", "lib/angular-resource/angular-resource.js"],
                     helpers: ["lib/angular-mocks/angular-mocks.js"],
+                    specs: "test/*Spec.js"
+                }
+            },
+            coverage: {
+                src: ["src/js/service/*.js"],
+                options: {
+                    vendor: ["lib/angular/angular.js", "lib/angular-resource/angular-resource.js"],
+                    helpers: ["lib/angular-mocks/angular-mocks.js"],
                     specs: "test/*Spec.js",
                     template: require("grunt-template-jasmine-istanbul"),
                     templateOptions: {
@@ -95,7 +103,7 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask("default", ["test", "copy"]);
-    grunt.registerTask("test", ["jshint", "jasmine"]);
+    grunt.registerTask("test", ["jshint", "jasmine:coverage"]);
 
     grunt.loadNpmTasks("grunt-exec");
     grunt.loadNpmTasks("grunt-plato");
