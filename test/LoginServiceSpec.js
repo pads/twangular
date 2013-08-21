@@ -94,6 +94,18 @@ describe("Login Service", function() {
         $mockHttpBackend.flush();
     });
 
+    it("should send a CSRF token when it is present and the option is set to true", function () {
+
+        var challenger = "tiddlyspace.cookie_form";
+        document.cookie = "csrf_token=123:pads:456abc";
+
+        $mockHttpBackend.expectPOST("/challenge/tiddlywebplugins.tiddlyspace.cookie_form",
+            "user=pads&password=letmein&csrf_token=123:pads:456abc").respond(200, "");
+
+        service.login("pads", "letmein", function() {}, challenger, true);
+        $mockHttpBackend.flush();
+    });
+
     //TODO test custom redirect
 
     afterEach(function() {

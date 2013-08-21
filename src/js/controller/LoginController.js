@@ -9,6 +9,6 @@ function LoginController($scope, loginService) {
             if(result.success) {
                 location.reload();
             }
-        }, "tiddlyspace.cookie_form");
+        }, "tiddlyspace.cookie_form", true);
     };
 }
